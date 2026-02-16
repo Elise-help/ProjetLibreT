@@ -24,8 +24,10 @@ class App:
                 self.perso.pos[0]-=5
         if btnp(KEY_Z) or btnp(KEY_UP):
             self.perso.saut()
-        if self.perso.pos[1]<self.s.sol and (self.perso.pos[1]+20!=self.ptf.co[1] and self.perso.pos[0]+20!=self.ptf.co[0] and self.perso.pos[0]!=self.ptf.co[0]): #ajouter or plateforme
-            self.perso.pos[1]+=self.perso.descente
+        if self.perso.pos[1]<self.s.sol:
+            if not self.perso.pos[1]+20==self.ptf.co[1]:
+                if not (self.perso.pos[0]+20==self.ptf.co[0] or self.perso.pos[0]==self.ptf.co[0]): #ajouter or plateforme
+                    self.perso.pos[1]+=self.perso.descente
         print('4',self.perso.pos[1])
         #faire un test qui verifie si on est sur une plateforme, sinon on descend(gere la descente du saut et la gravité)
         # créer une valeur, qui est- la somme des forces qui nous font descendre et monter et appliquer cette force
