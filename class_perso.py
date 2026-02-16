@@ -19,7 +19,7 @@ class Personnage:
         if self.h==0:
             self.h=self.pos[1]
             print('1',self.h)
-            for i in range (20):
+            for i in range (40):
                 print('5',self.h)
                 self.h-=2
         while self.pos[1]>self.h:
