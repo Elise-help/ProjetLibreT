@@ -19,11 +19,9 @@ class Personnage:
         if self.h==0:
             self.h=self.pos[1]
             print('1',self.h)
-            for i in range (40):
-                print('5',self.h)
-                self.h-=2
+            self.h-=80
         while self.pos[1]>self.h:
-            self.pos[1]-=1
+            self.pos[1]-=8
             print('2',self.pos[1])
         self.h=0
         self.s=False
